@@ -7,9 +7,20 @@ for (let i = 1; i <= 256; i++) {
 };
 
 //mouse hover to change color
-let gridSelection = document.querySelector(".grid");
 
-document.addEventListener("mouseover", () => {
+let gridSelection = document.getElementsByClassName("grid");
+
+document.addEventListener("mouseover", function (event){
+    event.target.classList.add("changeColor");
+    event.target.classList.remove("grid");
+}); 
+
+
+/*
+
+  document.querySelector(".grid");
+
     document.querySelector(".grid").classList.add("changeColor");
     document.querySelector(".grid").classList.remove("grid");
-});
+
+*/
