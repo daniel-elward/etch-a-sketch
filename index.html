@@ -8,8 +8,32 @@
 </head>
 
 <body>
-<div id="wrapper">
+    <h1></h1>
+<div class="userControl">
+        <label for="16x16"></label>
+            <input type="radio" name="gridChoice" id="16x16" value="256" checked>
+            16 x 16
+        </label><br>
 
+        <label for="32x32"></label>
+            <input type="radio" name="gridChoice" id="32x32" value="1024">
+            32 x 32
+        </label><br>
+
+        <label for="64x64"></label>
+            <input type="radio" name="gridChoice" id="64x64" value="4096">
+            64 x 64
+        </label><br>
+
+        <input type="submit" id="gridSelectionBtn" value="Submit">
+
+        <p id="testOut"></p>
+</div>
+
+<div id="testWrapper">
+    <div id="gameWrapper">
+        
+    </div>
 </div>
 
 <script src="script.js"></script>
