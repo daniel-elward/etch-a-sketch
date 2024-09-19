@@ -1,40 +1,38 @@
 //get users grid selection and populate the grid
 function gridSelection(){
     const grids = document.getElementsByName('gridChoice');
-    const textOut = document.getElementById('testOut');
+    const gridSelectionTxt = document.getElementById('testOut');
     let userChoice;
 
     for(let i = 0; i < grids.length; i++){
         
         if(grids[i].checked) {
-            textOut.innerHTML = grids[i].value; //testing log
+            gridSelectionTxt.innerHTML = grids[i].value; 
+            //testing log
             userChoice = grids[i].value;
         }
     }
 
-    //testing log
-    console.log(`from inside gridSelection function ${userChoice}`)
+    //reset existing grid
+    let gridElement = document.querySelectorAll('.grid');
+    if (gridElement){
+        gridElement.forEach(e => e.remove());
+    };
+
+    //grid creation :: 64x64 might be too much CRASHING
+    for (let i = 1; i <= userChoice; i++) {
+        let wrapper = document.getElementById("gameWrapper");
+        let grid = document.createElement("div");
+        grid.classList.add("grid");
+        wrapper.appendChild(grid);
+    };
+
 }
 
 const submit = document.getElementById('gridSelectionBtn');
 submit.addEventListener("click", gridSelection);
 
-
 /*
-let radioGridSelection;
-
-//define button click
-const gridSetBtn = document.getElementById("gridSelectionBtn");
-gridSetBtn.addEventListener("click", function (){
-
-    //radio button selection
-    radioGridSelection = document.querySelector('input[name="gridChoice"]:checked').value;
-
-    return radioGridSelection;
-});
-
-console.log(radioGridSelection)
-
 
 //populate the grid
 //grid sizes
@@ -63,4 +61,5 @@ for (let i = 1; i <= radioGridSelection; i++) {
     grid.classList.add("grid");
     wrapper.appendChild(grid);
 };
+
 */

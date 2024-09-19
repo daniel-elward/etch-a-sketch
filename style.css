@@ -1,16 +1,24 @@
-#wrapper {
-    width:800px;
-    height: 800px;
+#testWrapper {
+    margin: auto;
+    padding: auto;  
+}
+
+#gameWrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    border: 1px solid red;
+}
 
-    border: 3px solid black;
+.gridSelectionForm {
+    margin:0;
 }
 
 .grid {
-    width: 50px;
-    height:50px;
-    flex: 1 1 50px;
+    width: 35px;
+    height: 35px;
+    background-color: aquamarine;
 }
 
 .changeColor {
@@ -19,3 +27,21 @@
     flex: 1 1 50px;
     background-color: black;
 }
+
+.userControl {
+    width: 450px;
+    padding: 15px;
+    border: 2px solid red;
+}
+
+/*
+
+ORIGINAL .GRID
+
+.grid {
+    width: 50px;
+    height:50px;
+    flex: 1 1 50px;
+}
+
+*/
