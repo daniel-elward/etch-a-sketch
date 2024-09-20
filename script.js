@@ -9,23 +9,59 @@ function gridSelection(){
         if(grids[i].checked) {
             gridSelectionTxt.innerHTML = grids[i].value; 
             //testing log
-            userChoice = grids[i].value;
+            userChoice = Number(grids[i].value);
         }
-    }
+    } 
 
     //reset existing grid
-    let gridElement = document.querySelectorAll('.grid');
-    if (gridElement){
-        gridElement.forEach(e => e.remove());
-    };
+    function reset() {
+        let gridElement = document.getElementById('gameWrapper');
 
-    //grid creation :: 64x64 might be too much CRASHING
-    for (let i = 1; i <= userChoice; i++) {
-        let wrapper = document.getElementById("gameWrapper");
-        let grid = document.createElement("div");
-        grid.classList.add("grid");
-        wrapper.appendChild(grid);
-    };
+        while (gridElement.firstChild) {
+            gridElement.firstChild.remove();
+        }
+    }  
+
+    //grid creation 
+    if (userChoice === 256){
+
+        reset();
+
+        for (let i = 1; i <= userChoice; i++) {
+
+            let wrapper = document.getElementById("gameWrapper");
+            let createGrid = document.createElement("div");
+    
+            createGrid.classList.add("gridLarge");
+            wrapper.appendChild(createGrid);  
+        }
+    } else if (userChoice === 1024) {
+
+        reset();
+
+        for (let i = 1; i <= userChoice; i++) {
+
+            let wrapper = document.getElementById("gameWrapper");
+            let createGrid = document.createElement("div");
+    
+            createGrid.classList.add("gridMedium");
+            wrapper.appendChild(createGrid);  
+        }
+    } else if (userChoice === 4096){
+
+        reset();
+
+        for (let i = 1; i <= userChoice; i++) {
+
+            let wrapper = document.getElementById("gameWrapper");
+            let createGrid = document.createElement("div");
+    
+            createGrid.classList.add("gridSmall");
+            wrapper.appendChild(createGrid);  
+        }
+    } else {
+        alert("There has been an error!");
+    }
 
 }
 

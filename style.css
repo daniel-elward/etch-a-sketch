@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #testWrapper {
     margin: auto;
     padding: auto;  
@@ -15,33 +20,31 @@
     margin:0;
 }
 
-.grid {
+.gridLarge {
     width: 35px;
     height: 35px;
     background-color: aquamarine;
 }
 
+.gridMedium {
+    width: 17.5px;
+    height: 17.5px;
+    background-color: aquamarine;
+}
+
+.gridSmall {
+    width: 8.75px;
+    height: 8.75px;
+    background-color: aquamarine;
+}
+
 .changeColor {
-    width: 50px;
-    height:50px;
-    flex: 1 1 50px;
     background-color: black;
 }
 
 .userControl {
     width: 450px;
     padding: 15px;
+    margin: 15px;
     border: 2px solid red;
 }
-
-/*
-
-ORIGINAL .GRID
-
-.grid {
-    width: 50px;
-    height:50px;
-    flex: 1 1 50px;
-}
-
-*/
