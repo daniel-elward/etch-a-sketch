@@ -1,50 +1,41 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-#testWrapper {
-    margin: auto;
-    padding: auto;  
-}
-
-#gameWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 560px;
-    height: 560px;
-    border: 1px solid red;
+.userControl {
+    width: 450px;
+    padding: 15px;
+    margin: 25px;
+    border: 2px solid red;
 }
 
 .gridSelectionForm {
     margin:0;
 }
 
-.gridLarge {
-    width: 35px;
-    height: 35px;
-    background-color: aquamarine;
+.gameWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 560px;
+    height: 560px;
+    margin: 25px;
+    border: 1px solid black;
 }
 
-.gridMedium {
-    width: 17.5px;
-    height: 17.5px;
-    background-color: aquamarine;
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    border: 1px solid red;
 }
 
-.gridSmall {
-    width: 8.75px;
-    height: 8.75px;
-    background-color: aquamarine;
-}
+.box {
+    display: flex;
+    flex: 1 1 auto;
 
-.changeColor {
-    background-color: black;
-}
-
-.userControl {
-    width: 450px;
-    padding: 15px;
-    margin: 15px;
-    border: 2px solid red;
+    border: 1px solid black;
 }

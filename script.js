@@ -8,14 +8,13 @@ function gridSelection(){
         
         if(grids[i].checked) {
             gridSelectionTxt.innerHTML = grids[i].value; 
-            //testing log
             userChoice = Number(grids[i].value);
         }
     } 
 
     //reset existing grid
     function reset() {
-        let gridElement = document.getElementById('gameWrapper');
+        let gridElement = document.querySelector('.gameWrapper');
 
         while (gridElement.firstChild) {
             gridElement.firstChild.remove();
@@ -23,79 +22,100 @@ function gridSelection(){
     }  
 
     //grid creation 
-    if (userChoice === 256){
+    if (userChoice === 16){
 
         reset();
 
-        for (let i = 1; i <= userChoice; i++) {
+        //create column/verticle wrappers based on user input
+        for (let i = 1; i <= userChoice; i++){
 
-            let wrapper = document.getElementById("gameWrapper");
-            let createGrid = document.createElement("div");
-    
-            createGrid.classList.add("gridLarge");
-            wrapper.appendChild(createGrid);  
+            let wrapper = document.querySelector(".gameWrapper");
+
+            let createColumnWrapper = document.createElement("div");
+            createColumnWrapper.classList.add("columnWrapper");
+            wrapper.appendChild(createColumnWrapper);
         }
-    } else if (userChoice === 1024) {
+
+        //get all column wrappers 
+        let getColumnWrappers = document.querySelectorAll(".columnWrapper");
+
+        for (let j = 0; j < userChoice; j++) {
+
+            let columnWrapper = getColumnWrappers[j];
+
+            for (let k = 0; k < userChoice; k++){
+            
+            let createBox = document.createElement("div");
+            createBox.classList.add("box");
+            columnWrapper.appendChild(createBox);
+            }
+        };
+    };
+
+        //grid creation 
+        if (userChoice === 32){
+
+            reset();
+    
+            //create column/verticle wrappers based on user input
+            for (let i = 1; i <= userChoice; i++){
+    
+                let wrapper = document.querySelector(".gameWrapper");
+    
+                let createColumnWrapper = document.createElement("div");
+                createColumnWrapper.classList.add("columnWrapper");
+                wrapper.appendChild(createColumnWrapper);
+            }
+    
+            //get all column wrappers 
+            let getColumnWrappers = document.querySelectorAll(".columnWrapper");
+    
+            for (let j = 0; j < userChoice; j++) {
+    
+                let columnWrapper = getColumnWrappers[j];
+    
+                for (let k = 0; k < userChoice; k++){
+                
+                let createBox = document.createElement("div");
+                createBox.classList.add("box");
+                columnWrapper.appendChild(createBox);
+                }
+            };
+        };
+
+            //grid creation 
+    if (userChoice === 64){
 
         reset();
 
-        for (let i = 1; i <= userChoice; i++) {
+        //create column/verticle wrappers based on user input
+        for (let i = 1; i <= userChoice; i++){
 
-            let wrapper = document.getElementById("gameWrapper");
-            let createGrid = document.createElement("div");
-    
-            createGrid.classList.add("gridMedium");
-            wrapper.appendChild(createGrid);  
+            let wrapper = document.querySelector(".gameWrapper");
+
+            let createColumnWrapper = document.createElement("div");
+            createColumnWrapper.classList.add("columnWrapper");
+            wrapper.appendChild(createColumnWrapper);
         }
-    } else if (userChoice === 4096){
 
-        reset();
+        //get all column wrappers 
+        let getColumnWrappers = document.querySelectorAll(".columnWrapper");
 
-        for (let i = 1; i <= userChoice; i++) {
+        for (let j = 0; j < userChoice; j++) {
 
-            let wrapper = document.getElementById("gameWrapper");
-            let createGrid = document.createElement("div");
-    
-            createGrid.classList.add("gridSmall");
-            wrapper.appendChild(createGrid);  
-        }
-    } else {
-        alert("There has been an error!");
-    }
+            let columnWrapper = getColumnWrappers[j];
+
+            for (let k = 0; k < userChoice; k++){
+            
+            let createBox = document.createElement("div");
+            createBox.classList.add("box");
+            columnWrapper.appendChild(createBox);
+            }
+        };
+    };
 
 }
 
-const submit = document.getElementById('gridSelectionBtn');
+
+const submit = document.getElementById("gridSelectionBtn");
 submit.addEventListener("click", gridSelection);
-
-/*
-
-//populate the grid
-//grid sizes
-// 16x16 = 256 (35px boxes) 32x32 = 1024 (17.5px boxes) 64x64 = 4096 (8.75px boxes)
-
-if (radioGridSelection === 256) {
-    console.log(radioGridSelection)
-    //let gridWidthAndHeight = document.querySelector('div[class="grid"]')
-    
-    //element.style.width = "35px";
-    //element.style.height = "35px";
-
-} else if (radioGridSelection === 1024) {
-    console.log(radioGridSelection)
-
-    gridWidthAndHeight = document.querySelector('div[class="grid"]')
-    
-    gridWidthAndHeight.style.width = "17.5px";
-    gridWidthAndHeight.style.height = "17.5px";
-  
-}
-
-for (let i = 1; i <= radioGridSelection; i++) {
-    let wrapper = document.getElementById("gameWrapper");
-    let grid = document.createElement("div");
-    grid.classList.add("grid");
-    wrapper.appendChild(grid);
-};
-
-*/
