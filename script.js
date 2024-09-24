@@ -114,8 +114,18 @@ function gridSelection(){
         };
     };
 
-}
+    //listen for mouseover on box class
+    let boxes = document.getElementsByClassName("box");
 
+    for (let l = 0; l < boxes.length; l++){
+        boxes[l].addEventListener("mouseover", function (event) {
+
+            event.target.classList.add("boxColorChange");
+            event.target.classList.remove("box");
+            console.log("test")
+        })
+    };
+}; 
 
 const submit = document.getElementById("gridSelectionBtn");
 submit.addEventListener("click", gridSelection);
