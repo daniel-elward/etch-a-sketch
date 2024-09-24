@@ -6,7 +6,6 @@ function gridSelection(){
     for(let i = 0; i < grids.length; i++){
         
         if(grids[i].checked) {
-            gridSelectionTxt.innerHTML = grids[i].value; 
             userChoice = Number(grids[i].value);
         }
     } 

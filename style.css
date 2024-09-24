@@ -4,11 +4,59 @@
     box-sizing: border-box;
 }
 
-.userControl {
-    width: 450px;
+html, body {
+    background-color: rgb(196, 170, 170);
+}
+
+.outterWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+}
+
+.innerWrapper>h1 {
+    color: yellow;
+    font-style: italic;
+}
+
+.innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 80vh;
+    background-color: red;
+    border-radius: 20px;
     padding: 15px;
-    margin: 25px;
-    border: 2px solid red;
+}
+
+.controlWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.userControl>button {
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.userControl {
+    width: 50%;
+}
+
+.roundButton {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .gridSelectionForm {
@@ -19,10 +67,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 560px;
-    height: 560px;
+    width: 80%;
+    height: 65%;
     margin: 25px;
-    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
 }
 
 .columnWrapper {

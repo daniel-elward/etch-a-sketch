@@ -8,30 +8,47 @@
 </head>
 
 <body>
-    <h1></h1>
-<div class="userControl">
-        <label for="16x16"></label>
-            <input type="radio" name="gridChoice" id="16x16" value="16" checked>
-            16 x 16
-        </label><br>
+<div class="outterWrapper">
 
-        <label for="32x32"></label>
-            <input type="radio" name="gridChoice" id="32x32" value="32">
-            32 x 32
-        </label><br>
+  <div class="innerWrapper">
 
-        <label for="64x64"></label>
-            <input type="radio" name="gridChoice" id="64x64" value="64">
-            64 x 64
-        </label><br>
+    <h1>Etch-a-Sketch</h1>
 
-        <input type="submit" id="gridSelectionBtn" value="Submit">
+      <!--START of game area-->
+      <div class="gameWrapper"></div>
+      <!--END of game area-->
 
-        <p id="testOut"></p>
+      <div class="controlWrapper">
+
+        <div class="roundButton"></div>
+        
+          <div class="userControl">
+            <p>Select grid size</p>
+            <label for="16x16"></label>
+                <input type="radio" name="gridChoice" id="16x16" value="16" checked>
+                16 x 16
+            </label><br>
+
+            <label for="32x32"></label>
+                <input type="radio" name="gridChoice" id="32x32" value="32">
+                32 x 32
+            </label><br>
+
+            <label for="64x64"></label>
+                <input type="radio" name="gridChoice" id="64x64" value="64">
+                64 x 64
+            </label><br>
+
+            <button id="gridSelectionBtn" value="Submit">Submit</button>
+
+          </div>
+
+        <div class="roundButton"></div>
+
+        </div>
 </div>
 
-<div class="gameWrapper">
-    
+  </div>
 </div>
 
 <script src="script.js"></script>
