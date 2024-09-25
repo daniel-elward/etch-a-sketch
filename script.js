@@ -1,6 +1,6 @@
 function gridSelection(){
-    const grids = document.getElementsByName('gridChoice');
-    const gridSelectionTxt = document.getElementById('testOut');
+    const grids = document.getElementsByName("gridChoice");
+    // UNUSED const gridSelectionTxt = document.getElementById('testOut');
     let userChoice;
 
     for(let i = 0; i < grids.length; i++){
@@ -12,7 +12,7 @@ function gridSelection(){
 
     //reset existing grid by REMOVING all divs
     function reset() {
-        let gridElement = document.querySelector('.gameWrapper');
+        let gridElement = document.querySelector(".gameWrapper");
 
         while (gridElement.firstChild) {
             gridElement.firstChild.remove();
@@ -129,5 +129,5 @@ function gridSelection(){
     };
 }; 
 
-const submit = document.getElementById("gridSelectionBtn");
-submit.addEventListener("click", gridSelection);
+const gridSubmit = document.getElementById("gridSelectionBtn");
+gridSubmit.addEventListener("click", gridSelection);

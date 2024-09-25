@@ -11,8 +11,14 @@ html, body {
     background-color: rgb(196, 170, 170);
 }
 
+h1 {
+    color: yellow;
+    font-style: italic;
+}
+
 h2 {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .outterWrapper {
@@ -20,11 +26,6 @@ h2 {
     display: flex;
     justify-content: center;
     margin: 50px 0 0 0;
-}
-
-.innerWrapper>h1 {
-    color: yellow;
-    font-style: italic;
 }
 
 .innerWrapper {
@@ -37,12 +38,13 @@ h2 {
     background-color: red;
     border-radius: 20px;
     padding: 15px;
+    box-shadow: 8px 8px 8px grey;
 }
 
 .controlWrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
 }
 
@@ -55,18 +57,15 @@ h2 {
     color: white;
 }
 
-.userControl {
-    display: flex;
-    justify-content: space-evenly;
-    width: 70%;
-    padding: 5px;
-    border: 1px solid white;
+.userControl>input {
+    margin: 8px;
 }
 
-.controlBox {
+.userControl {
     width: 70%;
+    padding: 5px;
+    color: white;
     text-align: center;
-    border: 1px solid white;
 }
 
 .roundButton {
@@ -74,10 +73,6 @@ h2 {
     height: 6rem;
     border-radius: 50%;
     background-color: white;
-}
-
-.gridSelectionForm {
-    margin:0;
 }
 
 .gameWrapper {
